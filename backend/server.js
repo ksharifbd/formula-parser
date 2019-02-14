@@ -25,7 +25,7 @@ app.get('/formulas', (req, res) => {
 });
 
 app.post('/result', (req, res) => {
-    console.log(req.body);
+    console.log(JSON.stringify(req.body, null, 2));
 });
 
 app.listen(app.get('port'), () => {
