@@ -1,0 +1,14 @@
+{
+  "name": "formula-parser",
+  "version": "0.1.0",
+  "description": "Returns results according to the formula provided by the API",
+  "main": "server.js",
+  "scripts": {
+    "start": "./node_modules/.bin/nodemon server.js"
+  },
+  "author": "Kamal Sharif",
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^1.18.10"
+  }
+}
