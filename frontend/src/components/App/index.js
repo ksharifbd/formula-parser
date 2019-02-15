@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import UserInput from '../UserInput';
+
 class App extends Component {
     render() {
         return (
@@ -10,10 +12,9 @@ class App extends Component {
                         <div>
                             <p>Formula: a+b+2+x</p>
                             <p>Inputs:</p>
-                            <div style={{marginBottom: '1rem'}}>
-                                <label style={{marginRight: '6rem'}}>a:</label>
-                                <input type='text' />
-                            </div>
+                            <UserInput
+                                label='a'
+                                value='2' />
                             <div style={{display: 'flex', flexDirection: 'row'}}>
                                 <p style={{marginRight: '2rem'}}>Result:</p>
                                 <p>11</p>
