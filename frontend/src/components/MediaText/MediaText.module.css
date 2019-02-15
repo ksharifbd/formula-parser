@@ -1,0 +1,9 @@
+.MediaText {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1rem;
+}
+
+.MediaText__left {
+    flex-grow: 1
+}
