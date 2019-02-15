@@ -15,9 +15,13 @@ const MediaText = ({width, left, right}) => (
 );
 
 MediaText.propTypes = {
-    width: PropTypes.string.isRequired,
+    width: PropTypes.string,
     left: PropTypes.node.isRequired,
     right: PropTypes.node.isRequired,
 };
+
+MediaText.defaultProps = {
+    width: 'auto',
+}
 
 export default MediaText;
