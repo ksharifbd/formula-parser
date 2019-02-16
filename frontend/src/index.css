@@ -23,7 +23,7 @@ p {
     margin-top: 0;
 }
 
-ul {
+ul, ol {
     margin-left: 0;
     padding-left: 0;
 }
