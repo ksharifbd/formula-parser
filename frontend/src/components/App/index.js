@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 
-import Calculator from '../Calculator';
+import CalculatorUI from '../CalculatorUI';
 
 class App extends Component {
     render() {
         return (
             <form>
                 <ol>
-                    <Calculator
+                    <CalculatorUI
                         sequence={1}
                         formula='a+b+c'
                         variables={['a', 'b', 'c']}

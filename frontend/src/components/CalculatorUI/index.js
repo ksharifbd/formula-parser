@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 
 import MediaText from '../MediaText';
 import UserInput from '../UserInput';
-import classes from './Calculator.module.css';
+import classes from './CalculatorUI.module.css';
 
-const Calculator = ({
+const CalculatorUI = ({
     sequence,
     formula,
     variables,
@@ -13,8 +13,8 @@ const Calculator = ({
     onChange,
     result,
 }) => (
-    <li className={classes.Calculator}>
-        <p className={classes.Calculator__Sequence}>{sequence}.</p>
+    <li className={classes.CalculatorUI}>
+        <p className={classes.CalculatorUI__Sequence}>{sequence}.</p>
         <div>
             <MediaText
                 marginRight='.8rem'
@@ -36,7 +36,7 @@ const Calculator = ({
     </li>
 );
 
-Calculator.propTypes = {
+CalculatorUI.propTypes = {
     sequence: PropTypes.number.isRequired,
     formula: PropTypes.string.isRequired,
     variables: PropTypes.arrayOf(PropTypes.string).isRequired,
@@ -45,4 +45,4 @@ Calculator.propTypes = {
     result: PropTypes.number.isRequired,
 };
 
-export default Calculator;
+export default CalculatorUI;
