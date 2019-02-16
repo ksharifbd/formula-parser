@@ -1,31 +1,20 @@
 import React, { Component } from 'react';
 
-import MediaText from '../MediaText';
-import UserInput from '../UserInput';
+import Calculator from '../Calculator';
 
 class App extends Component {
     render() {
         return (
             <form>
-                <ul>
-                    <li style={{display: 'flex', flexDirection: 'row'}}>
-                        <p style={{marginRight: '1rem'}}>1.</p>
-                        <div>
-                            <MediaText
-                                width='13.5rem'
-                                left={<p>Formula:</p>}
-                                right={<p>a+b+2+x</p>} />
-                            <p>Inputs:</p>
-                            <UserInput
-                                label='a'
-                                value='2' />
-                            <MediaText
-                                width='8.5rem'
-                                left={<p>Result:</p>}
-                                right={<p>11</p>} />
-                        </div>
-                    </li>
-                </ul>
+                <ol>
+                    <Calculator
+                        sequence={1}
+                        formula='a+b+c'
+                        variables={['a', 'b', 'c']}
+                        value='2'
+                        onChange={() => {}}
+                        result='11' />
+                </ol>
                 <button type='submit'>Submit</button>
             </form>
         );
