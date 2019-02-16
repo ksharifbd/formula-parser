@@ -1,10 +1,17 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const cors = require('cors');
 
 let app = express();
 
 app.set('port', 3001);
 
+const corsOptions = {
+    origin: 'http://localhost:3000',
+};
+
+app.options('*', cors(corsOptions));
+app.use(cors(corsOptions))
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
