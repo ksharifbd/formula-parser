@@ -1,9 +1,8 @@
 .MediaText {
-    display: flex;
-    flex-direction: row;
     margin-bottom: 1rem;
 }
 
-.MediaText__left {
-    flex-grow: 1
+.MediaText__Left,
+.MediaText__Right {
+    display: inline-block;
 }

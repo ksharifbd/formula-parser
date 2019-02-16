@@ -3,25 +3,25 @@ import PropTypes from 'prop-types';
 
 import classes from './MediaText.module.css';
 
-const MediaText = ({width, left, right}) => (
-    <div className={classes.MediaText} style={{width}}>
-        <div className={classes.MediaText__left}>
+const MediaText = ({marginRight, left, right}) => (
+    <div className={classes.MediaText}>
+        <div className={classes.MediaText__Left} style={{marginRight}}>
             {left}
         </div>
-        <div>
+        <div className={classes.MediaText__Right}>
             {right}
         </div>
     </div>
 );
 
 MediaText.propTypes = {
-    width: PropTypes.string,
+    marginRight: PropTypes.string,
     left: PropTypes.node.isRequired,
     right: PropTypes.node.isRequired,
 };
 
 MediaText.defaultProps = {
-    width: 'auto',
+    marginRight: 'auto',
 }
 
 export default MediaText;
