@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Media Text should render correctly with the default marginRight 1`] = `
+<div
+  className="MediaText"
+>
+  <div
+    className="MediaText__Left"
+    style={
+      Object {
+        "marginRight": "auto",
+      }
+    }
+  >
+    <span />
+  </div>
+  <div
+    className="MediaText__Right"
+  >
+    <span />
+  </div>
+</div>
+`;
+
+exports[`Media Text should render correctly with the given marginRight 1`] = `
+<div
+  className="MediaText"
+>
+  <div
+    className="MediaText__Left"
+    style={
+      Object {
+        "marginRight": "1rem",
+      }
+    }
+  >
+    <span />
+  </div>
+  <div
+    className="MediaText__Right"
+  >
+    <span />
+  </div>
+</div>
+`;
