@@ -32,7 +32,7 @@ app.get('/formulas', (req, res) => {
 });
 
 app.post('/result', (req, res) => {
-    console.log(JSON.stringify(req.body, null, 2));
+    console.log(`${JSON.stringify(req.body, null, 2)}\n \n`);
 });
 
 app.listen(app.get('port'), () => {
