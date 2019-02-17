@@ -1,7 +1,9 @@
 import calculateByFormula from '../calculateByFormula';
 
 describe('Calculate by Formula', () => {
-    const formula = 'a+b+c';
+    const formula1 = 'a+b+c';
+    const formula2 = 'a*b*c';
+
     const obj = {
         a: 3,
         b: 4,
@@ -16,11 +18,15 @@ describe('Calculate by Formula', () => {
 
     it('should throw Error if correct values are not given', () => {
         expect(() => {
-            calculateByFormula(formula, {x: 1, y: 4});
+            calculateByFormula(formula1, {x: 1, y: 4});
         }).toThrowError(ReferenceError);
     });
 
     it('should return 15 when correct inputs are provided', () => {
-        expect(calculateByFormula(formula, obj)).toBe(15);
-    })
+        expect(calculateByFormula(formula1, obj)).toBe(15);
+    });
+
+    it('should return 96 when correct inputs are provided', () => {
+        expect(calculateByFormula(formula2, obj)).toBe(96);
+    });
 });
