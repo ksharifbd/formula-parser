@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Calculator UI should render correctly  1`] = `
+<li
+  className="CalculatorUI"
+>
+  <p
+    className="CalculatorUI__Sequence"
+  >
+    1
+    .
+  </p>
+  <div>
+    <MediaText
+      left={
+        <p>
+          Formula:
+        </p>
+      }
+      marginRight=".8rem"
+      right={
+        <p>
+          a+b
+        </p>
+      }
+    />
+    <p>
+      Inputs:
+    </p>
+    <span
+      key="a"
+    >
+      a
+    </span>
+    <span
+      key="b"
+    >
+      b
+    </span>
+    <MediaText
+      left={
+        <p>
+          Result:
+        </p>
+      }
+      marginRight="2rem"
+      right={
+        <p>
+          5
+        </p>
+      }
+    />
+  </div>
+</li>
+`;
