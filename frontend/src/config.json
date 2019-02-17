@@ -1,0 +1,4 @@
+{
+    "API_URL": "http://localhost:3001",
+    "STORAGE_KEY": "state"
+}
