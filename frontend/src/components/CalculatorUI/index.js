@@ -2,15 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import MediaText from '../MediaText';
-import UserInput from '../UserInput';
 import classes from './CalculatorUI.module.css';
 
 const CalculatorUI = ({
     sequence,
     formula,
-    variables,
-    value,
-    onChange,
+    children,
     result,
 }) => (
     <li className={classes.CalculatorUI}>
@@ -21,13 +18,7 @@ const CalculatorUI = ({
                 left={<p>Formula:</p>}
                 right={<p>{formula}</p>} />
             <p>Inputs:</p>
-            {variables.map(variable => (
-                <UserInput
-                    key={variable}
-                    label={`${variable}:`}
-                    value={value}
-                    onChange={onChange} />
-            ))}
+            {children}
             <MediaText
                 marginRight='2rem'
                 left={<p>Result:</p>}
@@ -39,9 +30,7 @@ const CalculatorUI = ({
 CalculatorUI.propTypes = {
     sequence: PropTypes.number.isRequired,
     formula: PropTypes.string.isRequired,
-    variables: PropTypes.arrayOf(PropTypes.string).isRequired,
-    value: PropTypes.string.isRequired,
-    onChange: PropTypes.func.isRequired,
+    children: PropTypes.arrayOf(PropTypes.element),
     result: PropTypes.number.isRequired,
 };
 
