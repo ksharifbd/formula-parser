@@ -63,6 +63,10 @@ class App extends Component {
         fetchFormulas().then(formulas => this.setState({formulas}));
     }
 
+    componentWillUnmount() {
+        localStorage.removeItem(`${STORAGE_KEY}`);
+    }
+
     render() {
         const {formulas} = this.state;
 
