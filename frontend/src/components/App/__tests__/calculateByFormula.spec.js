@@ -20,7 +20,7 @@ describe('Calculate by Formula', () => {
         }).toThrowError(ReferenceError);
     });
 
-    it(`should return 15 when formula is ${formula} and object is ${obj}`, () => {
+    it('should return 15 when correct inputs are provided', () => {
         expect(calculateByFormula(formula, obj)).toBe(15);
     })
 });
