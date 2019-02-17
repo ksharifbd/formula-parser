@@ -54,7 +54,7 @@ class App extends Component {
         const output = state.formulas.map((formula, idx) => {
             const variablesAndValues = variablesBySequence[idx][`${idx + 1}`];
 
-            const result = calculateByFormula(formula, variablesAndValues.values) || 0;
+            const result = calculateByFormula(formula, variablesAndValues.values);
 
             this.setState({
                 [`result_${FORMULA_TRACKING_ID}_${idx + 1}`]: result
