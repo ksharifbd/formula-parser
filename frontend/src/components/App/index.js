@@ -36,9 +36,7 @@ class App extends Component {
         const output = state.formulas.map((formula, idx) => {
             const variablesAndValues = variablesBySequence[idx][`${idx + 1}`];
 
-            const values = variablesAndValues.values;
-
-            const result = calculateByFormula(formula, values);
+            const result = calculateByFormula(formula, variablesAndValues.values);
 
             this.setState({
                 [`result_fid_${idx + 1}`]: result
@@ -63,6 +61,7 @@ class App extends Component {
 
     render() {
         const {formulas} = this.state;
+
         return (
             <form onSubmit={this.handleSubmit}>
                 <ol>
