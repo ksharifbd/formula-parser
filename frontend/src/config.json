@@ -1,4 +1,5 @@
 {
     "API_URL": "http://localhost:3001",
-    "STORAGE_KEY": "statefp"
+    "STORAGE_KEY": "statefp",
+    "FORMULA_TRACKING_ID": "fid"
 }

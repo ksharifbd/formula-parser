@@ -1,6 +1,8 @@
+import {FORMULA_TRACKING_ID} from '../config.json';
+
 function constructResultStates(arr) {
     return arr.reduce((acc, cur, idx) => {
-        acc[`result_fid_${idx + 1}`] = 0;
+        acc[`result_${FORMULA_TRACKING_ID}_${idx + 1}`] = 0;
 
         return acc;
     }, {});

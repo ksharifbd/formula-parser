@@ -1,7 +1,11 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
-import {STORAGE_KEY, API_URL} from '../../config.json';
+import {
+    STORAGE_KEY,
+    API_URL,
+    FORMULA_TRACKING_ID,
+} from '../../config.json';
 import CalculatorUI from '../CalculatorUI';
 import {getVariables, fetchFormulas} from '../../utils';
 import UserInput from '../UserInput';
@@ -39,7 +43,7 @@ class App extends Component {
             const result = calculateByFormula(formula, variablesAndValues.values);
 
             this.setState({
-                [`result_fid_${idx + 1}`]: result
+                [`result_${FORMULA_TRACKING_ID}_${idx + 1}`]: result
             })
 
 
@@ -71,13 +75,13 @@ class App extends Component {
                             key={formula}
                             sequence={sequence}
                             formula={formula}
-                            result={this.state[`result_fid_${sequence}`]}>
+                            result={this.state[`result_${FORMULA_TRACKING_ID}_${sequence}`]}>
                             {getVariables(formula).map(variable => (
                                 <UserInput
                                     key={`fid_${sequence}_${variable}`}
                                     name={`fid_${sequence}_${variable}`}
                                     label={`${variable}:`}
-                                    value={this.state[`fid_${sequence}_${variable}`]}
+                                    value={this.state[`${FORMULA_TRACKING_ID}_${sequence}_${variable}`]}
                                     onChange={this.handleChange} />
                             ))}
                             </CalculatorUI>
