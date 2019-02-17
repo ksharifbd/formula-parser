@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`User Input should render correctly 1`] = `
+<MediaText
+  left={
+    <label>
+      x
+    </label>
+  }
+  marginRight="6rem"
+  right={
+    <input
+      className="UserInput__input"
+      name="x"
+      onChange={[Function]}
+      type="text"
+      value="2"
+    />
+  }
+/>
+`;
