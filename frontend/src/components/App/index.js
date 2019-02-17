@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 
-import {STORAGE_KEY} from '../../config.json';
+import {STORAGE_KEY, API_URL} from '../../config.json';
 import CalculatorUI from '../CalculatorUI';
 import {getVariables, fetchFormulas} from '../../utils';
 import UserInput from '../UserInput';
@@ -51,6 +52,9 @@ class App extends Component {
             }
         });
 
+        axios.post(`${API_URL}/result`, output)
+            .catch(err => console.log(err));
+
     }
 
     componentDidMount() {
@@ -59,7 +63,6 @@ class App extends Component {
 
     render() {
         const {formulas} = this.state;
-        console.log('state', this.state);
         return (
             <form onSubmit={this.handleSubmit}>
                 <ol>
