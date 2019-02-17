@@ -1,5 +1,5 @@
-import {getVariables} from '../utils';
-import {FORMULA_TRACKING_ID} from '../config.json';
+import {getVariables} from '../../utils';
+import {FORMULA_TRACKING_ID} from '../../config.json';
 
 function constructInputStates(arr) {
     return arr.reduce((acc, cur, idx) => {

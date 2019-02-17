@@ -7,7 +7,12 @@ import {
     FORMULA_TRACKING_ID,
 } from '../../config.json';
 import CalculatorUI from '../CalculatorUI';
-import {getVariables, fetchFormulas} from '../../utils';
+import {
+    getVariables,
+    fetchFormulas,
+    constructInputStates,
+    constructResultStates,
+} from '../../utils';
 import UserInput from '../UserInput';
 import getVariablesBySequence from './getVariablesBySequence';
 import calculateByFormula from './calculateByFormula';
@@ -30,6 +35,15 @@ class App extends Component {
         this.setState({[name]: value});
     }
 
+    setInitialInpputAndResultStates() {
+        const {formulas} = this.state;
+
+        this.setState({
+            ...constructInputStates(formulas),
+            ...constructResultStates(formulas),
+        });
+    }
+
     handleSubmit(evt) {
         evt.preventDefault();
 
@@ -40,7 +54,7 @@ class App extends Component {
         const output = state.formulas.map((formula, idx) => {
             const variablesAndValues = variablesBySequence[idx][`${idx + 1}`];
 
-            const result = calculateByFormula(formula, variablesAndValues.values);
+            const result = calculateByFormula(formula, variablesAndValues.values) || 0;
 
             this.setState({
                 [`result_${FORMULA_TRACKING_ID}_${idx + 1}`]: result
@@ -57,6 +71,7 @@ class App extends Component {
         axios.post(`${API_URL}/result`, output)
             .catch(err => console.log(err));
 
+        this.setInitialInpputAndResultStates();
     }
 
     componentDidMount() {

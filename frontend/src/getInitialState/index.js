@@ -1,5 +1,7 @@
-import fetchFormulas from '../utils/fetchFormulas';
-import constructInitialState from './constructInitialState';
+import {
+    fetchFormulas,
+    constructInitialState
+} from '../utils';
 
 function getInitialState() {
     return fetchFormulas().then(response => {
