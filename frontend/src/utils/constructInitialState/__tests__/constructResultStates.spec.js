@@ -15,4 +15,8 @@ describe('Construct Result States', () => {
     it('should return correct output when appropriate input is provided', () => {
         expect(constructResultStates(input)).toMatchObject(output);
     });
+
+    it('should return correct output when appropriate input is provided', () => {
+        expect(constructResultStates(input)).not.toMatchObject({random: 'object'});
+    });
 });
