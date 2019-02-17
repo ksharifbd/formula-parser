@@ -1,7 +1,7 @@
 import constructInputStates from './constructInputStates';
 import constructResultStates from './constructResultStates';
 
-function constructInitialState(arr) {
+function constructInitialState(arr = []) {
     const inputStates = constructInputStates(arr);
     const resultStates = constructResultStates(arr);
 
