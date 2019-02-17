@@ -1,18 +1,9 @@
-import {getVariables} from '../utils';
+import constructInputStates from './constructInputStates';
+import constructResultStates from './constructResultStates';
 
 function constructInitialState(arr) {
-    const inputStates = arr.reduce((acc, cur, idx) => {
-        getVariables(cur).map(variable => {
-            return acc[`fid_${idx + 1}_${variable}`] = '';
-        });
-        return acc;
-    }, {});
-
-    const resultStates = arr.reduce((acc, cur, idx) => {
-        acc[`result_fid_${idx + 1}`] = 0;
-
-        return acc;
-    }, {});
+    const inputStates = constructInputStates(arr);
+    const resultStates = constructResultStates(arr);
 
     return {...inputStates, formulas: [], ...resultStates};
 }
