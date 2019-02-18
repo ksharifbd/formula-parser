@@ -28,6 +28,7 @@
     "not op_mini all"
   ],
   "devDependencies": {
+    "axios-mock-adapter": "^1.16.0",
     "react-scripts": "^2.1.5"
   }
 }
