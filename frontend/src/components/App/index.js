@@ -97,8 +97,8 @@ class App extends Component {
                             result={this.state[`result_${FORMULA_TRACKING_ID}_${sequence}`]}>
                             {getVariables(formula).map(variable => (
                                 <UserInput
-                                    key={`fid_${sequence}_${variable}`}
-                                    name={`fid_${sequence}_${variable}`}
+                                    key={`${FORMULA_TRACKING_ID}_${sequence}_${variable}`}
+                                    name={`${FORMULA_TRACKING_ID}_${sequence}_${variable}`}
                                     label={`${variable}:`}
                                     value={this.state[`${FORMULA_TRACKING_ID}_${sequence}_${variable}`]}
                                     onChange={this.handleChange} />
