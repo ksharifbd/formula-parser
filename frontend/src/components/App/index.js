@@ -35,12 +35,11 @@ class App extends Component {
         this.setState({[name]: value});
     }
 
-    setInitialInpputAndResultStates() {
+    setInitialInputStates() {
         const {formulas} = this.state;
 
         this.setState({
             ...constructInputStates(formulas),
-            ...constructResultStates(formulas),
         });
     }
 
@@ -71,7 +70,7 @@ class App extends Component {
         axios.post(`${API_URL}/result`, output)
             .catch(err => console.log(err));
 
-        this.setInitialInpputAndResultStates();
+        this.setInitialInputStates();
     }
 
     componentDidMount() {
