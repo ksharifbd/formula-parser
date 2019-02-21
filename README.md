@@ -1,5 +1,5 @@
 # Formla-Parser
-A react app that parses API provided formula and sends result to the API
+A react app that parses API provided formula, does calculation, and sends result to the API
 
 ## **Input and Output**
 
