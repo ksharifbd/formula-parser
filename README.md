@@ -1,3 +1,44 @@
+# Formla-Parser
+A react app that parses API provided formula and sends result to the API
+
+## **Input and Output**
+
+### Sample Input provided by the API
+```Json
+[
+  {
+    "formula": "a+b+2+x"
+  },
+  {
+    "formula": "c-d+v"
+  }	
+]
+```
+
+### Sample Output posted to the API
+```Json
+[
+  {
+    "formula": "a+b+2+x",
+    "values": {
+      "a": 2,
+      "b": 3,
+      "x": 4
+    }
+    "result": 11
+  },
+  {
+    "formula": "c-d+v"
+    "values": {
+      "c": 10,
+      "d": 5,
+      "v": 4
+    }
+    "result": 9
+  }	
+]
+```
+
 ## **How to run**
 
 - Make sure to have the node version `v10.15.1` and npm version `6.4.1`. Install the latest `lts` via [nvm](https://github.com/creationix/nvm).
