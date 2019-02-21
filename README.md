@@ -24,16 +24,16 @@ A react app that parses API provided formula and sends result to the API
       "a": 2,
       "b": 3,
       "x": 4
-    }
+    },
     "result": 11
   },
   {
-    "formula": "c-d+v"
+    "formula": "c-d+v",
     "values": {
       "c": 10,
       "d": 5,
       "v": 4
-    }
+    },
     "result": 9
   }	
 ]
