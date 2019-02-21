@@ -17,7 +17,7 @@ function getVariablesBySequence(state = {}) {
     
         return {
             [sequence]: {
-                values: {...mappedByVariables},
+                values: Object.assign({}, ...mappedByVariables),
             }
         };
     });
